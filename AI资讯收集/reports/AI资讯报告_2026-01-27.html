@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 资讯报告 - 2026年01月27日</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+                'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .header .date {
+            color: #718096;
+            font-size: 16px;
+        }
+
+        .header .statistics {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .header .statistics .stat-item {
+            display: inline-block;
+            margin-right: 30px;
+            color: #4a5568;
+        }
+
+        .header .statistics .stat-value {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 24px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 4px solid white;
+            font-weight: 600;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            background-color: #f7fafc;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge.dynamic { background: #ffedf5; color: #e91e63; }
+        .badge.product { background: #e3f2fd; color: #1976d2; }
+        .badge.funding { background: #fff3e0; color: #f57c00; }
+        .badge.application { background: #e8f5e9; color: #388e3c; }
+        .badge.report { background: #f3e5f5; color: #7b1fa2; }
+
+        .card .title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .card .source {
+            font-size: 13px;
+            color: #718096;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .card .source::before {
+            content: '📰';
+            margin-right: 5px;
+        }
+
+        .card .publish-date {
+            font-size: 12px;
+            color: #a0aec0;
+            margin-bottom: 12px;
+        }
+
+        .card .summary {
+            color: #4a5568;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .card .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .card .keywords .keyword {
+            background: #f7fafc;
+            color: #4a5568;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+        }
+
+        .card .link-icon {
+            margin-top: 15px;
+            color: #667eea;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .card .link-icon::before {
+            content: '→';
+            margin-right: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 25px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header .statistics .stat-item {
+                display: block;
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AI 资讯日报</h1>
+            <div class="date">2026年01月27日</div>
+            <div class="statistics">
+                <div class="stat-item">总计: <span class="stat-value">15</span></div><div class="stat-item">产品发布: <span class="stat-value">10</span></div><div class="stat-item">融资并购: <span class="stat-value">5</span></div>
+            </div>
+        </div>
+
+                <div class="section">
+            <div class="section-title">🚀 产品发布 (10条)</div>
+            <div class="grid">
+        <a href="https://www.jiqizhixin.com/articles/2026-01-27-12" class="card" target="_blank">
+            <span class="badge product">产品发布</span>
+            <div class="title">实时主动引导，研究周期缩短至分钟级，开源系统解决AI研究工具关键局限</div>
+            <div class="source">机器之心</div>
+            <div class="publish-date">发布时间: Tue, 27 Jan 2026 18:38:17 +0800</div>
+            <div class="summary">实时主动引导，研究周期缩短至分钟级，开源系统解决AI研究工具关键局限</div>
+            <div class="keywords"><span class="keyword">AI</span></div>
+            <div class="link-icon">点击阅读原文</div>
+        </a>
+        <a href="https://www.jiqizhixin.com/articles/2026-01-27-11" class="card" target="_blank">
+            <span class="badge product">产品发布</span>
+            <div class="title">刚刚，杨植麟亲自开源Kimi K2.5！国产大模型打架的一天</div>
+            <div class="source">机器之心</div>
+            <div class="publish-date">发布时间: Tue, 27 Jan 2026 18:03:36 +0800</div>
+            <div class="summary">刚刚，杨植麟亲自开源Kimi K2.5！国产大模型打架的一天</div>
+            <div class="keywords"><span class="keyword">大模型</span><span class="keyword">模型</span></div>
+            <div class="link-icon">点击阅读原文</div>
+        </a>
+        <a href="https://www.jiqizhixin.com/articles/2026-01-27-9" class="card" target="_blank">
+            <span class="badge product">产品发布</span>
+            <div class="title">英伟达Earth 2开源全新天气预报模型，能生成15天全球预报</div>
+            <div class="source">机器之心</div>
+            <div class="publish-date">发布时间: Tue, 27 Jan 2026 17:46:53 +0800</div>
+            <div class="summary">英伟达Earth 2开源全新天气预报模型，能生成15天全球预报</div>
+            <div class="keywords"><span class="keyword">模型</span></div>
+            <div class="link-icon">点击阅读原文</div>
+        </a>
+        <a href="https://www.jiqizhixin.com/articles/2026-01-27-8" class="card" target="_blank">
+            <span class="badge product">产品发布</span>
+            <div class="title">刚刚，DeepSeek又探索新架构了，开源OCR 2</div>
+            <div class="source">机器之心</div>
+            <div class="publish-date">发布时间: Tue, 27 Jan 2026 14:12:05 +0800</div>
+            <div class="summary">刚刚，DeepSeek又探索新架构了，开源OCR 2</div>
+            
+            <div class="link-icon">点击阅读原文</div>
+        </a>
+        <a href="https://www.jiqizhixin.com/articles/2026-01-27-6" class="card" target="_blank">
+            <span class="badge product">产品发布</span>
+            <div class="title">即刻体验国内最强推理模型Qwen3-Max-Thinking，千问PC和网页端已接入</div>
+            <div class="source">机器之心</div>
+            <div class="publish-date">发布时间: Tue, 27 Jan 2026 13:34:43 +0800</div>
+            <div class="summary">即刻体验国内最强推理模型Qwen3-Max-Thinking，千问PC和网页端已接入</div>
+            <div class="keywords"><span class="keyword">模型</span><span class="keyword">推理</span></div>
+            <div class="link-icon">点击阅读原文</div>
+        </a>
+        <a href="https://www.jiqizhixin.com/articles/2026-01-27-5" class="card" target="_blank">
+            <span class="badge product">产品发布</span>
+            <div class="title">蚂蚁具身研究首次亮相！就解决了机器人「看」透明玻璃这些难题，还开源了</div>
+            <div class="source">机器之心</div>
+            <div class="publish-date">发布时间: Tue, 27 Jan 2026 13:32:40 +0800</div>
+            <div class="summary">蚂蚁具身研究首次亮相！就解决了机器人「看」透明玻璃这些难题，还开源了</div>
+            <div class="keywords"><span class="keyword">机器人</span></div>
+            <div class="link-icon">点击阅读原文</div>
+        </a>
+        <a href="https://www.jiqizhixin.com/articles/2026-01-27-4" class="card" target="_blank">
+            <span class="badge product">产品发布</span>
+            <div class="title">性能比肩Gemini 3 Pro！昨晚，阿里千问最强模型来了</div>
+            <div class="source">机器之心</div>
+            <div class="publish-date">发布时间: Tue, 27 Jan 2026 13:23:08 +0800</div>
+            <div class="summary">性能比肩Gemini 3 Pro！昨晚，阿里千问最强模型来了</div>
+            <div class="keywords"><span class="keyword">模型</span></div>
+            <div class="link-icon">点击阅读原文</div>
+        </a>
+        <a href="https://www.jiqizhixin.com/articles/2026-01-27-3" class="card" target="_blank">
+            <span class="badge product">产品发布</span>
+            <div class="title">跨境电商版Sora发布：全球首个AI原生电商视频Multi-Agent来了</div>
+            <div class="source">机器之心</div>
+            <div class="publish-date">发布时间: Tue, 27 Jan 2026 13:17:46 +0800</div>
+            <div class="summary">跨境电商版Sora发布：全球首个AI原生电商视频Multi-Agent来了</div>
+            <div class="keywords"><span class="keyword">AI</span><span class="keyword">视频</span></div>
+            <div class="link-icon">点击阅读原文</div>
+        </a>
+        <a href="https://www.jiqizhixin.com/articles/2026-01-27" class="card" target="_blank">
+            <span class="badge product">产品发布</span>
+            <div class="title">大模型哪里出问题、怎么修，这篇可解释性综述一次讲清</div>
+            <div class="source">机器之心</div>
+            <div class="publish-date">发布时间: Tue, 27 Jan 2026 13:04:34 +0800</div>
+            <div class="summary">大模型哪里出问题、怎么修，这篇可解释性综述一次讲清</div>
+            <div class="keywords"><span class="keyword">大模型</span><span class="keyword">模型</span></div>
+            <div class="link-icon">点击阅读原文</div>
+        </a>
+        <a href="https://sspai.com/post/105741" class="card" target="_blank">
+            <span class="badge product">产品发布</span>
+            <div class="title">派早报：高铁客服和专家回应「高铁二氧化碳超标」</div>
+            <div class="source">少数派</div>
+            <div class="publish-date">发布时间: Mon, 26 Jan 2026 08:57:40 +0800</div>
+            <div class="summary">高铁客服和专家回应「高铁二氧化碳超标」因不堪 AI 骚扰，cURL 将终止漏洞赏金计划联通推出「果粉」卡套餐微软证实向 FBI 移交 BitLocker 加密密钥Meta 裁员引发「VR 寒冬」担忧初代宝可梦成为流行 AI 测试方法看看就行的小道消息少数派的近期动态你可能错过的好文章查看全文</div>
+            <div class="keywords"><span class="keyword">AI</span></div>
+            <div class="link-icon">点击阅读原文</div>
+        </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">💰 融资并购 (5条)</div>
+            <div class="grid">
+        <a href="https://www.jiqizhixin.com/articles/2026-01-27-10" class="card" target="_blank">
+            <span class="badge funding">融资并购</span>
+            <div class="title">ICLR 2026 放榜了！28%接收率，欢迎投稿机器之心</div>
+            <div class="source">机器之心</div>
+            <div class="publish-date">发布时间: Tue, 27 Jan 2026 17:51:50 +0800</div>
+            <div class="summary">ICLR 2026 放榜了！28%接收率，欢迎投稿机器之心</div>
+            
+            <div class="link-icon">点击阅读原文</div>
+        </a>
+        <a href="https://sspai.com/post/105584" class="card" target="_blank">
+            <span class="badge funding">融资并购</span>
+            <div class="title">软件工程师的 AI Coding 进化论</div>
+            <div class="source">少数派</div>
+            <div class="publish-date">发布时间: Tue, 27 Jan 2026 15:09:12 +0800</div>
+            <div class="summary">2026 年你依然可以 Happy Coding。查看全文</div>
+            <div class="keywords"><span class="keyword">AI</span></div>
+            <div class="link-icon">点击阅读原文</div>
+        </a>
+        <a href="https://www.jiqizhixin.com/articles/2026-01-27-7" class="card" target="_blank">
+            <span class="badge funding">融资并购</span>
+            <div class="title">高效智能体的「幕后推手」是谁？一篇综述带你从记忆×工具学习×规划看透</div>
+            <div class="source">机器之心</div>
+            <div class="publish-date">发布时间: Tue, 27 Jan 2026 14:07:59 +0800</div>
+            <div class="summary">高效智能体的「幕后推手」是谁？一篇综述带你从记忆×工具学习×规划看透</div>
+            <div class="keywords"><span class="keyword">智能体</span></div>
+            <div class="link-icon">点击阅读原文</div>
+        </a>
+        <a href="https://www.jiqizhixin.com/articles/2026-01-27-2" class="card" target="_blank">
+            <span class="badge funding">融资并购</span>
+            <div class="title">刚刚，微软全新一代自研AI芯片Maia 200问世</div>
+            <div class="source">机器之心</div>
+            <div class="publish-date">发布时间: Tue, 27 Jan 2026 13:07:32 +0800</div>
+            <div class="summary">刚刚，微软全新一代自研AI芯片Maia 200问世</div>
+            <div class="keywords"><span class="keyword">AI</span></div>
+            <div class="link-icon">点击阅读原文</div>
+        </a>
+        <a href="https://sspai.com/post/105506" class="card" target="_blank">
+            <span class="badge funding">融资并购</span>
+            <div class="title">NAS 自部署 TrendRadar：搭建基于 AI 的热点情报站</div>
+            <div class="source">少数派</div>
+            <div class="publish-date">发布时间: Mon, 26 Jan 2026 11:36:45 +0800</div>
+            <div class="summary">像 TrendRadar 这类应用，或许才是许多公司和工作室采购 NAS 的原因之一。NAS 并非只能在家用环境中保存照片、挂挂 PT，更是能通过持久稳定工作，帮助用户圈出一块清醒的自留地，把实现各种功能的主动权重新握在自己手里。查看全文</div>
+            <div class="keywords"><span class="keyword">AI</span></div>
+            <div class="link-icon">点击阅读原文</div>
+        </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>AI 资讯收集 - 每天为您提供最新的 AI 行业动态</p>
+        </div>
+    </div>
+</body>
+</html>
